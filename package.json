@@ -1,0 +1,54 @@
+{
+	"name": "{name}",
+	"version": "0.0.0",
+	"description": "description example",
+	"keywords": [
+	],
+	"homepage": "",
+	"bugs": {
+		"url": "https://github.com/arebaka/{name}"
+	},
+	"license": "MIT",
+	"author": "arelive <me@are.moe> (https://are.moe)",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/arebaka/{name}.git"
+	},
+	"funding": {
+		"type": "patreon",
+		"url": "https://www.patreon.com/arelive"
+	},
+	"type": "module",
+	"main": "dist/index.js",
+	"bin": "./start.sh",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"lint": "oxlint",
+		"lint:fix": "oxlint --fix",
+		"format": "oxfmt --check",
+		"format:write": "oxfmt --write",
+		"test": ":",
+		"check": "tsc --noEmit && bun run lint && bun run format && bun run test",
+		"clean": "rm -rf dist",
+		"build": "bun run clean && tsc",
+		"start": "bun dist/index.js",
+		"prepublishOnly": "bun run check && bun run build"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"@stylistic/eslint-plugin": "^5.10.0",
+		"@types/bun": "^1.4.3",
+		"@types/node": "^26.1.0",
+		"eslint-plugin-perfectionist": "^5.12.1",
+		"eslint-plugin-regexp": "^3.3.1",
+		"eslint-plugin-security": "^4.2.0",
+		"eslint-plugin-sonarjs": "^4.2.2",
+		"eslint-plugin-testing-library": "^7.16.2",
+		"oxfmt": "^0.73.0",
+		"oxlint": "^1.86.0",
+		"oxlint-tsgolint": "^7.0.2004",
+		"typescript": "^5.9.3"
+	},
+	"packageManager": "bun"
+}
