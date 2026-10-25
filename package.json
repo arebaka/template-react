@@ -35,7 +35,7 @@
 		"dev": "vite --host=0.0.0.0 --port=3000",
 		"preview": "vite preview",
 		"start": "bun run build && bun run preview",
-		"prepublishOnly": "bun run check && bun run build"
+		"prepare": "bun run check && bun run build"
 	},
 	"dependencies": {
 		"@arelive/reset.css": "^1.2.0",
