@@ -17,13 +17,6 @@
 ![NPM Downloads](https://img.shields.io/npm/d18m/{name}?style=flat)
 ![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/{name}?style=flat)
 
-![Crates.io Version](https://img.shields.io/crates/v/{name}?style=flat)
-![Crates.io Total Downloads](https://img.shields.io/crates/d/{name}?style=flat)
-![Crates.io Size](https://img.shields.io/crates/size/{name}?style=flat)
-
-![AUR Version](https://img.shields.io/aur/version/{name}?style=flat)
-![AUR Popularity](https://img.shields.io/aur/popularity/{name}?style=flat)
-
 - Feature 1
 - Feature 2
 - Feature 3

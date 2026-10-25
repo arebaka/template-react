@@ -1,9 +1,10 @@
 {
 	"compilerOptions": {
 		"target": "esnext",
-		"module": "nodenext",
-		"moduleResolution": "nodenext",
-		"lib": ["ESNext"],
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"jsx": "react-jsx",
 		"strict": true,
 		"noUncheckedIndexedAccess": true,
 		"noPropertyAccessFromIndexSignature": true,
@@ -11,11 +12,6 @@
 		"noFallthroughCasesInSwitch": true,
 		"verbatimModuleSyntax": true,
 		"skipLibCheck": true,
-		"declaration": true,
-		"sourceMap": false,
-		"rootDir": "src",
-		"outDir": "dist",
-		"declarationDir": "dist"
 	},
-	"include": ["src"]
+	"include": ["vite.config.ts", "vite-env.d.ts", "src", "data", "tests", "i18n", "styles"]
 }

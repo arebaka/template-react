@@ -16,6 +16,7 @@ jsdoc: true
 sortPackageJson: true
 
 ignorePatterns:
+  - index.html
   - dist/**
   - node_modules/**
   - jspm_packages/**

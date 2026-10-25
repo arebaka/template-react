@@ -1,6 +1,7 @@
 # Source
 src
 tests
+public
 
 # Data
 data
@@ -21,6 +22,9 @@ package-lock.json
 pnpm-lock.yaml
 yarn.lock
 bun.lock
+
+# DevTools
+.devtools-oxc
 
 # Dotenv
 .env*

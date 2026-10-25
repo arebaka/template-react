@@ -8,6 +8,9 @@ data
 node_modules
 jspm_packages
 
+# DevTools
+.devtools-oxc
+
 # Dotenv
 .env*
 !.env.example

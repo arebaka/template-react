@@ -1,7 +1,7 @@
 {
 	"name": "{name}",
 	"version": "0.0.0",
-	"description": "description example",
+	"description": "{description}",
 	"keywords": [
 	],
 	"homepage": "",
@@ -19,7 +19,6 @@
 		"url": "https://www.patreon.com/arelive"
 	},
 	"type": "module",
-	"main": "dist/index.js",
 	"bin": "./start.sh",
 	"types": "dist/index.d.ts",
 	"scripts": {
@@ -27,28 +26,47 @@
 		"lint:fix": "oxlint --fix",
 		"format": "oxfmt --check",
 		"format:write": "oxfmt --write",
-		"test": ":",
-		"check": "tsc --noEmit && bun run lint && bun run format && bun run test",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"test:ui": "bun tests/ui.ts",
+		"check": "tsc --noEmit && bun run lint && bun run format && bun run test && bun run build && bun run test:ui",
 		"clean": "rm -rf dist",
-		"build": "bun run clean && tsc",
-		"start": "bun dist/index.js",
+		"build": "bun run clean && vite build",
+		"dev": "vite --host=0.0.0.0 --port=3000",
+		"preview": "vite preview",
+		"start": "bun run build && bun run preview",
 		"prepublishOnly": "bun run check && bun run build"
 	},
 	"dependencies": {
+		"@arelive/reset.css": "^1.2.0",
+		"react": "^19.3.1",
+		"react-dom": "^19.3.1"
 	},
 	"devDependencies": {
 		"@stylistic/eslint-plugin": "^5.10.0",
-		"@types/bun": "^1.4.3",
-		"@types/node": "^26.1.0",
-		"eslint-plugin-perfectionist": "^5.12.1",
+		"@types/node": "^26.6.5",
+		"@types/react": "^19.3.0",
+		"@types/react-dom": "^19.3.0",
+		"@vitejs/devtools": "^0.8.0",
+		"@vitejs/devtools-oxc": "^0.8.0",
+		"@vitejs/devtools-rolldown": "^0.8.0",
+		"@vitejs/devtools-vite": "^0.8.0",
+		"@vitejs/devtools-vitest": "^0.8.0",
+		"@vitejs/plugin-react": "^6.1.2",
+		"@vitest/ui": "^5.0.5",
+		"eslint-plugin-perfectionist": "^5.13.0",
 		"eslint-plugin-regexp": "^3.3.1",
 		"eslint-plugin-security": "^4.2.0",
 		"eslint-plugin-sonarjs": "^4.2.2",
 		"eslint-plugin-testing-library": "^7.16.2",
+		"oxc-transform-react": "^0.154.0",
 		"oxfmt": "^0.73.0",
-		"oxlint": "^1.86.0",
+		"oxlint": "^1.89.0",
 		"oxlint-tsgolint": "^7.0.2004",
-		"typescript": "^5.9.3"
+		"sass-embedded": "^1.106.1",
+		"typescript": "^5.9.3",
+		"vite": "^8.3.5",
+		"vitest": "^5.0.5"
 	},
 	"packageManager": "bun"
 }
